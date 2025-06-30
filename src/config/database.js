@@ -2,6 +2,7 @@
 import dotenv from 'dotenv';
 import { Sequelize } from 'sequelize';
 
+
 dotenv.config();
 
 export const sequelize = new Sequelize(
@@ -22,6 +23,7 @@ export const startDB = async () => {
         console.error('no se pudo establecer conexion', error);
     }
 };
+
 
 
 export default sequelize;

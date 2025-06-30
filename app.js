@@ -4,14 +4,14 @@ import { startDB } from './src/config/database.js';
 
 dotenv.config();
 
-const app= express();
+const app = express();
 const PORT = process.env.PUERTO || 4000;
 
-app.use (express.json());
+app.use(express.json());
+
 
 startDB();
 
-app.listen(PORT, () => {         
-  console.log (' El servidor esta corriendo en el puerto')
-   });
-
+app.listen(PORT, () => {
+  console.log(`El servidor está corriendo en: http://localhost:${PORT}`);
+});
