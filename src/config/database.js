@@ -25,5 +25,4 @@ export const startDB = async () => {
 };
 
 
-
 export default sequelize;
