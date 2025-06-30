@@ -10,12 +10,14 @@ const PORT = process.env.PUERTO || 4000;
 
 app.use(express.json());
 
-export const startServer =async() => {
+const startServer =async() => {
   await startDB();
   await Character.sync();
   console.log('Base de datos sincronizada');    
   console.log ('tabla de personajes creada');
 }
+
+startServer();
 
 app.listen(PORT, () => {
   console.log(`El servidor está corriendo en: http://localhost:${PORT}`);
