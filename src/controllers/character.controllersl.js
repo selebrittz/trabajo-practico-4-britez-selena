@@ -1,4 +1,4 @@
-import { Character } from "../models/character.model.js";
+import { Character } from "../models/character.models.js";
 
 const isValidInteger = (value) => {
   return Number.isInteger(Number(value));
